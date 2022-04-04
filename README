@@ -5,15 +5,11 @@ Please see the corresponding sections below for details.
 Dependencies
 ============
 
-  URI: <first dependency>
-  branch: <branch name>
+  URI: git://git.openembedded.org/openembedded-core
+  branch: dunfell
 
-  URI: <second dependency>
-  branch: <branch name>
-
-  .
-  .
-  .
+  URI: git://git.yoctoproject.org/meta-raspberrypi
+  branch: dunfell
 
 Patches
 =======
