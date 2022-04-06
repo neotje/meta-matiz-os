@@ -12,9 +12,9 @@ inherit extrausers
 REQUIRED_DISTRO_FEATURES = "x11"
 
 # Set rootfs to 200 MiB
-IMAGE_OVERHEAD_FACTOR ?= "1.0"
-IMAGE_ROOTFS_SIZE ?= "2048000"
-#IMAGE_ROOTFS_SIZE ?= "8192"
+#IMAGE_OVERHEAD_FACTOR ?= "1.0"
+#IMAGE_ROOTFS_SIZE ?= "2048000"
+IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE_append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "" ,d)}"
 
 # Change root password
@@ -34,4 +34,4 @@ PREFERRED_PROVIDER_virtual/java-native = "cacao-native"
 # Optional since there is only one provider for now
 PREFERRED_PROVIDER_virtual/javac-native = "ecj-bootstrap-native"
 
-IMAGE_INSTALL_append = " openjdk-8"
+IMAGE_INSTALL += " openjdk-8"
