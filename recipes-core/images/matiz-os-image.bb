@@ -1,6 +1,6 @@
 SUMMARY = "Matiz os image base"
 
-IMAGE_FEATURES += "splash package-management x11-base"
+IMAGE_FEATURES:append = " splash package-management x11-base"
 
 LICENSE = "MIT"
 
@@ -34,4 +34,8 @@ PREFERRED_PROVIDER_virtual/java-native = "cacao-native"
 # Optional since there is only one provider for now
 PREFERRED_PROVIDER_virtual/javac-native = "ecj-bootstrap-native"
 
-IMAGE_INSTALL += " openjdk-8"
+IMAGE_INSTALL:append = " net-tools wpa-supplicant"
+IMAGE_INSTALL:append = " openjdk-8 maven"
+IMAGE_INSTALL:append = " libsdl2"
+IMAGE_INSTALL:append = " cen2"
+#IMAGE_INSTALL:append = " javafx"
